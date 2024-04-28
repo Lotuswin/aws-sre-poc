@@ -12,9 +12,9 @@ pipeline {
     }
     stages {
         stage('EC2 Deploy') {
-            agent {
-                label none
-            }
+            // agent {
+            //     label none
+            // }
             environment {
                 AWS_CREDS=credentials('aws-secrets')
             }
