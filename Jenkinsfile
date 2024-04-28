@@ -24,7 +24,7 @@ pipeline {
                 mkdir -p ~/.aws
                 cp config ~/.aws/
                 sed -i "s|##ACCESS_KEY_ID##|${AWS_CREDS_USR}|g" ~/.aws/config
-                sed -i "s|##ACCESS_KEY_ID##|${AWS_CREDS_PASS}|g" ~/.aws/config
+                sed -i "s|##ACCESS_KEY_ID##|${AWS_CREDS_PSW}|g" ~/.aws/config
                 cat ~/.aws/config
                 aws s3 ls
                 #terraform init
