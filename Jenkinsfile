@@ -1,5 +1,5 @@
 pipeline {
-    // agent none
+    agent any
     parameters {
         // choice(name: 'ACTION', choices: ['present', 'absent'], description: '')
         string(name: 'Name', defaultValue: 'test', description: '')
