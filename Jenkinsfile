@@ -2,7 +2,7 @@ pipeline {
     agent none
     parameters {
         // choice(name: 'ACTION', choices: ['present', 'absent'], description: '')
-        // string(name: 'Name', defaultValue: 'test', description: '')
+        string(name: 'Name', defaultValue: 'test', description: '')
     }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10'))
