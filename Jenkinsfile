@@ -25,7 +25,8 @@ pipeline {
                 cp config ~/.aws/
                 sed -i "s|##ACCESS_KEY_ID##|${AWS_CREDS_USR}|g" ~/.aws/config
                 sed -i "s|##ACCESS_KEY_ID##|${AWS_CREDS_PASS}|g" ~/.aws/config
-                #aws s3 ls
+                cat ~/.aws/config
+                aws s3 ls
                 #terraform init
                 #terraform apply -auto-approve
                 #terraform destroy -auto-approve
