@@ -5,7 +5,7 @@ pipeline {
         string(name: 'Name', defaultValue: 'test', description: '')
     }
     options {
-        buildDiscarder(logRotator(numToKeepStr: '10'))
+        buildDiscarder(logRotator(numToKeepStr: '1'))
         disableConcurrentBuilds()
         timestamps()
         // ansiColor('xterm')
