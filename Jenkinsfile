@@ -21,6 +21,7 @@ pipeline {
             steps {
                 sh """
                 set -ex
+                rm -rf ~/.aws/config
                 mkdir -p ~/.aws
                 cp config ~/.aws/config
                 #sed -i "s|##ACCESS_KEY_ID##|${AWS_CREDS_USR}|g" ~/.aws/config
