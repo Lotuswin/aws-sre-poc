@@ -29,6 +29,8 @@ pipeline {
                 sed -i "s|##ACCESS_KEY_ID##|${AWS_CREDS_USR}|g" ~/.aws/credentials
                 sed -i "s|##SECRET_ACCESS_KEY##|${AWS_CREDS_PSW}|g" ~/.aws/credentials
                 cat ~/.aws/credentials
+                source ~/.aws/credentials
+                source ~/.aws/config
                 aws s3 ls
                 #terraform init
                 #terraform apply -auto-approve
