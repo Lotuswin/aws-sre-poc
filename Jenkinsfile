@@ -31,6 +31,8 @@ pipeline {
                 cat ~/.aws/credentials
                 AWS_SHARED_CREDENTIALS_FILE=~/.aws/credentials
                 AWS_CONFIG_FILE=~/.aws/config
+                source AWS_SHARED_CREDENTIALS_FILE
+                source AWS_CONFIG_FILE
                 aws s3 ls
                 #terraform init
                 #terraform apply -auto-approve
