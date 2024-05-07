@@ -1,2 +1,2 @@
-[profile default]
-  region=ap-south-1
+[default]
+region=ap-south-1
