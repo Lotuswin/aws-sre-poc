@@ -24,7 +24,7 @@ pipeline {
                 rm -rf ~/.aws/config
                 mkdir -p ~/.aws
                 cp config ~/.aws/config
-                ln -s credentials ~/.aws/credentials
+                cp credentials ~/.aws/credentials
                 sed -i "s|##ACCESS_KEY_ID##|${AWS_CREDS_USR}|g" ~/.aws/credentials
                 sed -i "s|##SECRET_ACCESS_KEY##|${AWS_CREDS_PSW}|g" ~/.aws/credentials
                 cat ~/.aws/credentials
