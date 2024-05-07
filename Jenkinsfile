@@ -22,6 +22,7 @@ pipeline {
                 sh """
                 set -ex
                 rm -rf ~/.aws/config
+                rm -rf ~/.aws/credentials
                 mkdir -p ~/.aws
                 cp config ~/.aws/config
                 cp credentials ~/.aws/credentials
