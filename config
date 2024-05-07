@@ -1,2 +1,1 @@
-[default]
-region=ap-south-1
+export AWS_DEFAULT_REGION=ap-south-1
